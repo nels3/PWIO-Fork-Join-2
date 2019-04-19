@@ -23,7 +23,7 @@
                         <TextArea fx:id="width" editable="true" layoutX="100.0" layoutY="10.0" prefHeight="30.0" prefWidth="100.0" />
                         <TextArea fx:id="number_of_cols" editable="true" layoutX="100.0" layoutY="60.0" prefHeight="30.0" prefWidth="100.0" />
                         <TextArea fx:id="number_of_rows" editable="true" layoutX="100.0" layoutY="110.0" prefHeight="30.0" prefWidth="100.0" />
-                        <Button fx:id="submit" layoutX="20.0" layoutY="160.0" onMouseClicked="#start_action" text="Zacznij obliczenia" />
+                        <Button fx:id="submit" layoutX="20.0" layoutY="160.0" onMouseClicked="#start_action" text="Start" />
                         <TextArea fx:id="text_one_thread" editable="false" layoutX="20.0" layoutY="200.0" prefHeight="30.0" prefWidth="200.0" />
                         <TextArea fx:id="text_multi_thread" editable="false" layoutX="20.0" layoutY="250.0" prefHeight="30.0" prefWidth="200.0" />
                         <TextArea fx:id="warnings" editable="false" layoutX="20.0" layoutY="300.0" prefHeight="30.0" prefWidth="260.0" />

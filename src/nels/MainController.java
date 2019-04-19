@@ -74,7 +74,7 @@ public class MainController {
                     text_multi_thread.clear();
                     text_one_thread.clear();
                     warnings.clear();
-                    warnings.appendText("Zle dane wejsciowe. Masz zrobic typ INT");
+                    warnings.appendText("Wrong input data. Should be INT");
                     good_data = false;
                     return;
                 }
@@ -83,7 +83,7 @@ public class MainController {
                 set_number_of_rows = Integer.valueOf(number_of_rows.getText());
                 if (set_width <1 || set_number_of_cols <1 || set_number_of_rows<1){
                     warnings.clear();
-                    warnings.appendText("Zle dane wejsciowe. Maja byc wieksze od 0");
+                    warnings.appendText("Wrong input data. Should be greater than 0!");
                     good_data = false;
                 }
                 else{
@@ -105,7 +105,7 @@ public class MainController {
 
         Scene multiThreadScene = new Scene(root, set_number_of_cols*set_width, set_number_of_rows*set_width);
         Stage newWindow = new Stage();
-        newWindow.setTitle("Multi Thread");
+        newWindow.setTitle("Multi Threads");
         newWindow.setScene(multiThreadScene);
         newWindow.setX(400);
         newWindow.setY(0);
@@ -147,9 +147,8 @@ public class MainController {
             long one_thread_start_time = System.currentTimeMillis();
             startOneThread();
             long one_thread_stop_time = System.currentTimeMillis();
-            text_one_thread.appendText("Jeden watek trwal: " + (one_thread_stop_time - one_thread_start_time) + "\n");
-            text_multi_thread.appendText("Wiele watkow trwalo: " + (multi_thread_stop_time - multi_thread_start_time) + "\n");
-            System.out.println("Skonczono");
+            text_one_thread.appendText("Using one thread: " + (one_thread_stop_time - one_thread_start_time) + "ms\n");
+            text_multi_thread.appendText("Using multi threads: " + (multi_thread_stop_time - multi_thread_start_time) + "ms\n");
         }
     }
 
